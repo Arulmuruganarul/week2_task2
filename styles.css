@@ -1,0 +1,82 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.main-container{
+    display:flex;
+    justify-content: center;
+    
+}
+.card{
+    height: 60%;
+    width: 25%;
+    background-color: beige;
+    border-radius: 10px;
+    border:2px solid rgb(134, 106, 70);
+    text-align: center;
+    padding:15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.img-dec1{
+    margin:auto;
+    height: 350px;
+    width:80%;
+    border-radius: 5px;
+    transition-property: background-image;
+    transition-duration:0.30s;
+    transition-timing-function: linear;
+    background-image: url('https://rihaa.com/cdn/shop/products/image_93fee688-6430-4418-90c9-21c012616c68_400x.jpg?v=1683619727');
+    
+}
+.img-dec1:hover{
+    background-image:url("https://rihaa.com/cdn/shop/products/image_e4582c8a-8668-4f42-bf58-3fd734b672b4_300x.jpg?v=1683619705");
+}
+.heading{
+    font-size:16px;
+    
+}
+.slt-section{
+    width:80%;
+    height: 35px;
+    border: 1px solid rgb(134, 106, 70);
+    text-align: center;
+}
+
+
+  
+  button {
+    margin:20px;
+    position: relative;
+    color: rgb(17, 16, 16);
+    background-color: #c57e48;
+    font-size: large;
+    width: 80%;
+    padding: 8px 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgb(134, 106, 70);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    transform: scaleX(1);
+}
+
+button:hover::before {
+    transform-origin: right;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+}
